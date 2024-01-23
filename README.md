@@ -33,6 +33,9 @@ The controllers log information using SLF4J. Logging is utilized to track method
 ### Swagger:
 The application integrates with Swagger for API documentation. You can access the Swagger UI at `/swagger-ui.html`.
 
+### TESTING:
+Testing is not considered a focus for this task. So faults may occur!
+
 ## Dependencies:
 
 - **Spring Boot Starter WebFlux**: For building reactive web applications.
