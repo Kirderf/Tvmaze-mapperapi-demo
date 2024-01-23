@@ -1,0 +1,19 @@
+Oppgave fra oppgavegiver.
+
+Du er utvikler hos TV-Maze:
+      - Kan du beskrive noen av TV-Maze database tabeller?
+            ○ Hvordan henger disse tabellene sammen.
+            ○ Velg ut 3-4 tabeller
+      - Kan du gi et eksempel på hvordan man henter informasjon fra flere tabeller samtidig?
+      - Er det store mengder data i disse tabeller, ønsker man ikke å vise alt samtidig. Hvordan kan dette løses?
+            ○ Gi et eksempel på det.
+
+Svar fra kandidat:
+
+Hvis vi ser på shows endpointet til TVmaze så kan vi se utifra id gitt på denne at show i seg selv er en tabell. Show-tabellen har også en "network" tabell koblet direkte med denne da vi ser network id fra responsen. 
+Utifra dette endpointet  /shows/:id/cast vil jeg anta at man får alle folkene som har dette showet i et linking table med people.
+Vil også anta at de har en tabell for Episode også har de en int i hver av episodene som sier om det er season 1 eller 2 osv.
+
+Et eksempel på hvordan man henter ut informasjon fra flere tabeller er å embedde informasjon eks: https://api.tvmaze.com/shows/1?embed=cast.
+
+Det finnes flere løsninger på dette problemet og en løsning er å sette opp som et GraphQL api og en annen løsning er å lage forkortede versjoner eller en pathvariable som sier at man skal ha den forkortede versjonen.
